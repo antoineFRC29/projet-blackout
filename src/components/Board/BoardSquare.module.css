@@ -1,0 +1,115 @@
+.token {
+  position: absolute;
+  width: 34px;
+  height: 34px;
+  margin-left: -17px;
+  margin-top: -17px;
+  border-radius: var(--radius-token);
+  background: var(--color-paper);
+  border: 2px solid var(--color-ink);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: var(--shadow-token);
+}
+
+/* Basile's power doubles whatever square he's standing on — a soft amber glow follows
+   his pawn onto that square, so the group sees why its effect just doubled. */
+.token.halo {
+  border-color: var(--color-amber);
+  box-shadow: 0 0 0 5px rgba(201, 138, 62, 0.28), var(--shadow-token);
+  animation: haloPulse 1.6s ease-in-out infinite;
+}
+
+@keyframes haloPulse {
+  0%,
+  100% {
+    box-shadow: 0 0 0 4px rgba(201, 138, 62, 0.22), var(--shadow-token);
+  }
+  50% {
+    box-shadow: 0 0 0 8px rgba(201, 138, 62, 0.36), var(--shadow-token);
+  }
+}
+
+/* Squares now read as small ink-framed parchment medallions (matching the character
+   card's illustration frame) — the semantic color moved from the square's fill onto
+   its center dot, like a wax seal, rather than filling the whole token. */
+.token.returnToStart {
+  background: var(--color-paper-deep);
+  border-color: var(--color-amber-deep);
+}
+
+/* Action/Event squares carry the creator's own illustrated medallion art — same
+   circular-clip treatment as the start/finish squares, at the regular token size. */
+.token.action,
+.token.event {
+  overflow: hidden;
+  background: var(--color-paper);
+}
+
+/* Départ/arrivée read as landmark medallions rather than ordinary squares — triple
+   the size of a regular token so they stand out at a glance on the track. */
+.token.start {
+  width: 110px;
+  height: 110px;
+  margin-left: -55px;
+  margin-top: -55px;
+  border-radius: 999px;
+  border: 3px solid rgba(20, 22, 26, 0.4);
+  overflow: hidden;
+  background: var(--color-paper);
+}
+
+.token.finish {
+  width: 186px;
+  height: 186px;
+  margin-left: -93px;
+  margin-top: -93px;
+  border-radius: 999px;
+  border: 4px solid var(--color-amber);
+  overflow: hidden;
+  background: var(--color-ground-deep);
+  box-shadow: 0 0 0 8px rgba(201, 138, 62, 0.16), var(--shadow-token);
+}
+
+/* The provided coin-medallion artwork for the start/finish squares — object-fit
+   cover plus the token's own circular clip crops the art's white corners away. */
+.medallion {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.dot {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: var(--color-ink);
+}
+
+.token.positive .dot {
+  background: var(--color-teal);
+}
+
+.token.negative .dot {
+  background: var(--color-amber);
+}
+
+.token.returnToStart .dot {
+  background: var(--color-amber-deep);
+}
+
+/* Runic/blackletter numeral, sitting as a caption below the square rather than a
+   corner badge — echoes the gothic lettering on the character card banners. */
+.number {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-top: 3px;
+  font-family: var(--font-rune);
+  font-size: 14px;
+  line-height: 1;
+  color: var(--color-ink);
+  white-space: nowrap;
+}

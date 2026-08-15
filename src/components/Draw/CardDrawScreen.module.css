@@ -1,0 +1,116 @@
+.screen {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  height: 100svh;
+  background: var(--color-ground);
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  padding: max(28px, env(safe-area-inset-top)) 16px 8px;
+}
+
+.progress {
+  font-family: var(--font-body);
+  font-weight: 700;
+  font-size: 12px;
+  letter-spacing: 0.04em;
+  color: var(--text-on-ground-soft);
+}
+
+.stage {
+  flex: 1;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 8px 28px 16px;
+  overflow-y: auto;
+}
+
+.card {
+  width: min(320px, 100%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.cardImage {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: var(--radius-card);
+  filter: drop-shadow(0 16px 28px rgba(4, 5, 8, 0.45));
+}
+
+.cardFallback {
+  width: 100%;
+  aspect-ratio: 2 / 3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--color-paper);
+  border-radius: var(--radius-card);
+  box-shadow: var(--shadow-card);
+}
+
+.characterName {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 1.2;
+  color: var(--color-ink);
+}
+
+.divider {
+  width: 32px;
+  height: 2px;
+  border-radius: 999px;
+  background: var(--ring, var(--color-amber));
+  margin: 20px 0 16px;
+}
+
+.forLabel {
+  font-family: var(--font-body);
+  font-weight: 700;
+  font-size: 10.5px;
+  text-transform: uppercase;
+  letter-spacing: 0.09em;
+  color: var(--text-on-ground-soft);
+  margin-bottom: 4px;
+}
+
+.playerName {
+  font-family: var(--font-body);
+  font-weight: 700;
+  font-size: 17px;
+  color: var(--text-on-ground);
+}
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 12px 20px max(20px, env(safe-area-inset-bottom));
+}
+
+.nextBtn {
+  width: 100%;
+  max-width: 300px;
+  padding: 15px;
+  border: none;
+  border-radius: 999px;
+  background: var(--color-amber);
+  color: var(--color-paper);
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 16px;
+}
+
+.nextBtn:active {
+  transform: translateY(1px);
+}
