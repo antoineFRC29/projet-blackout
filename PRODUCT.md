@@ -32,8 +32,8 @@ Played in person, in the same room, during a party/evening — one session, mult
 - *Positive:* gain goulées (amount fixed per square, e.g. "7 gorgées" on square 7).
 - *Negative:* give goulées to an opponent of the landing player's choice (a dialog lets them pick who pays; amount fixed per square).
 - *Retour à la case départ:* two squares (1 and 60) send the pawn straight back to the start — no card, an immediate effect.
-- *Action cards:* drawn on landing on one of the board's 7 action squares — real content from `Fichier Cartes/Cartes action et cartes évenements.rtf`, each with a board-movement effect (swap with the last-place player, return to start, jump to a specific square, advance/retreat by a fixed amount, or skip the next turn).
-- *Event cards:* drawn on landing on one of the board's 6 event squares — real content from the same file, resolved entirely between players outside the app (drinking-game-style social prompts); no board effect.
+- *Action cards:* drawn on landing on one of the board's 11 action squares — real content from `Fichier Cartes/Cartes action et cartes évenements.rtf`, each with a board-movement effect (swap with the last-place player, return to start, jump to a specific square, advance/retreat by a fixed amount, or skip the next turn).
+- *Event cards:* drawn on landing on one of the board's 14 event squares — real content from the same file, resolved entirely between players outside the app (drinking-game-style social prompts); no board effect.
 
 Both decks are drawn like a real card deck (shuffled, no repeats until the deck's exhausted, then reshuffled) rather than a plain random pick each time. The earlier placeholder "Truth cards" square type has been retired outright — the creator's real board has no such squares, so it isn't a mechanic in the shipped game today (could come back later as a distinct feature if wanted).
 
